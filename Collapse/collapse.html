@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collapse - Virtual Bets</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header class="header">
+        <div class="header-inner container">
+            <a href="../index.html" class="brand">Virtual Bets</a>
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="../sports.html">Sports</a>
+                <a href="collapse.html" class="active">Casino</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- COLLAPSE GAME -->
+    <main class="container">
+        <div class="game-wrap panel">
+            <div class="points">Points: 1000</div>
+
+            <div class="plane-area">
+                <canvas id="trailCanvas"></canvas>
+                <img id="plane" src="Pics/plane.png" alt="Plane">
+            </div>
+
+            <div class="multiplier">Multiplier: 1.00x</div>
+            <div class="result"></div>
+
+            <div class="bet-buttons">
+                <button data-bet="8">8</button>
+                <button data-bet="50">50</button>
+                <button data-bet="100">100</button>
+                <button data-bet="200">200</button>
+                <button data-bet="500">500</button>
+                <button data-bet="1000">1000</button>
+                <input type="number" id="customBet" placeholder="Custom Amount">
+            </div>
+
+            <div class="action-buttons" style="margin-top:12px;">
+                <button class="btn" id="startBtn">Start</button>
+                <button class="btn" id="cashOutBtn" disabled>Cash Out</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 Virtual Bets
+    </footer>
+
+    <script src="collapse.js"></script>
+</body>
+</html>

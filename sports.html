@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Betting - Virtual Bets</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Virtual Bets</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="sports.html" class="active">Sports</a>
+        <a href="casino.html">Casino</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Live Matches</h2>
+
+    <!-- Balance / bets UI -->
+    <div class="panel" id="betting-panel">
+      <div id="balancePanel">
+        Points: <strong id="points">1000</strong> pts
+        <button id="addPointsBtn" type="button">Add 100 pts</button>
+      </div>
+
+      <div id="message" role="status" aria-live="polite" style="margin-top:.5rem"></div>
+
+      <!-- Live API-driven Football panel -->
+      <div class="panel" id="live-football-panel" aria-live="polite">
+        <h2>Live Football (API)</h2>
+
+        <!-- status shown while loading -->
+        <p id="status" role="status">Loading latest live matches…</p>
+
+        <!-- table that the script will populate -->
+        <table id="matchTable" class="fixtures-table" aria-describedby="status">
+          <thead>
+            <tr><th>League</th><th>Home</th><th>Away</th><th>Score</th><th>Odds</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="betsContainer" style="margin-top:1rem">
+        <h3>Placed bets</h3>
+        <ul id="betsList" aria-live="polite"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Virtual Bets | School Project
+  </footer>
+
+  <!-- Football API script: loads and populates the matches when the required DOM nodes are present -->
+  <script src="footballapi.js" defer></script>
+</body>
+</html>
